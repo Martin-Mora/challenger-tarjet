@@ -1,0 +1,47 @@
+@import 'colors';
+
+.container-check__confirm{
+  width: 90%;
+  margin: 7.5em auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+
+
+.container-check__confirm--good{
+  margin-bottom: 2em;
+}
+
+.container-check__confirm h1{
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.7em;
+  font-size: 1.5em;
+  color: $Very-dark-violet;
+}
+
+.container-check__confirm p{
+  color: $Dark-grayish-violet;
+}
+
+.container-check__confirm input{
+  margin-top: 2em;
+  background-color: $Very-dark-violet;
+  color: $White;
+  height: 3em;
+}
+
+.invisible{
+  display: none;
+}
+
+@media (min-width:1440px){
+  .container-check__confirm{
+    width: 100%;
+    bottom: 9em;
+    left: 10em;
+    position: absolute;
+  }
+}

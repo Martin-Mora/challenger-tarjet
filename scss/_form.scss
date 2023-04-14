@@ -1,0 +1,89 @@
+@import 'colors';
+
+.form{
+  width: 90%;
+  margin: 5em auto;
+  position: relative;
+  z-index: 2;
+}
+
+label h5{
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: .2em;
+  color: $Very-dark-violet;
+  cursor: pointer;
+}
+
+.form__data{
+  display: flex;  
+}
+
+input{
+  width: 90%;
+  margin:0.5em 0 1em 0.3em;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid $Light-grayish-violet;
+  cursor: pointer;
+  color: $Linear-gradient;
+
+}
+input:focus{
+  border: 1px solid hsl(249, 99%, 64%);
+  outline: none;
+}
+
+input::placeholder{
+  opacity: 0.5;
+}
+
+.form__data input{
+  width: 60%;
+  
+}
+
+.confirm{
+  background-color: $Very-dark-violet;
+  color: $White;
+  border-radius: 10px;
+  height: 3em;
+  margin-top: 1em;
+}
+
+.form__data .cvc{
+  width: 100%;
+}
+
+label .form__numberWrong,.complete,.expmonth,.expYear,.expCvc{
+  color: $Red;
+  position: relative;
+  bottom: 1em;
+  left: 0.5em;
+}
+
+.complete{
+  font-size: 0.7em;
+  height: 1.2em;
+}
+
+.year{
+  margin-right: 6em;
+  
+}
+
+
+@media (min-width:1440px){
+  .form{
+    width: 100%;
+    bottom: 9em;
+    left: 10em;
+    position: absolute;
+  }
+
+  label .form__numberWrong{
+    font-size: .8em;
+  }
+}
+

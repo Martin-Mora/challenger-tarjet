@@ -1,0 +1,107 @@
+@import 'colors';
+
+.Cards{
+  width: 70%;
+  position: absolute;
+  bottom: 28em;
+  left: 3em;
+  z-index: 1;
+}
+
+.Cards img{
+  width: 100%;
+}
+
+
+
+.Cards__back--img{
+  position: relative;
+  left: 2em;
+}
+
+.Cards__back--number{
+  position: relative;
+  bottom:8em;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.6em;
+  color: $White;
+  letter-spacing: 0.2em;
+}
+
+
+.Cards__front{
+  color: $White;
+  position: absolute;
+}
+
+.Cards__front--img{
+  position: relative;
+  bottom: 3.7em;
+  right: 2em;
+}
+
+.Cards__front--logo{
+  position:absolute;
+  z-index: 2;
+  transform: scale(.2);
+  top:2.5em;
+  right: 7em;
+}
+
+.Cards__front--number{
+  position: relative;
+  bottom: 9em;
+  letter-spacing: 0.2em;
+  font-size:0.9em;
+  right: 1.5em;
+}
+
+.Cards__front--data{
+  position: relative;
+  bottom: 14em;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  right: 2em;
+  font-size: 0.5em;
+  color:$Light-grayish-violet;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+
+@media (min-width:1440px){
+  .Cards{
+    width: 100%;
+    bottom:10em;
+    left: -22em;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .Cards__front{
+    position: relative;
+    top: 3em;
+  }
+  
+  .Cards__front--logo{
+    position: relative;
+    top: 5em;
+    right: 9em;
+  }
+
+  .Cards__back--number{
+    bottom:11em;
+  }
+
+  .Cards__front--number{
+    font-size: 1.2em;
+    bottom:8em;
+    right: 1em;
+  }
+
+  .Cards__front--data{
+    font-size: 0.6em;
+  }
+}

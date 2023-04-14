@@ -1,0 +1,262 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.Cards {
+  width: 70%;
+  position: absolute;
+  bottom: 28em;
+  left: 3em;
+  z-index: 1;
+}
+
+.Cards img {
+  width: 100%;
+}
+
+.Cards__back--img {
+  position: relative;
+  left: 2em;
+}
+
+.Cards__back--number {
+  position: relative;
+  bottom: 8em;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.6em;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.2em;
+}
+
+.Cards__front {
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+}
+
+.Cards__front--img {
+  position: relative;
+  bottom: 3.7em;
+  right: 2em;
+}
+
+.Cards__front--logo {
+  position: absolute;
+  z-index: 2;
+  transform: scale(0.2);
+  top: 2.5em;
+  right: 7em;
+}
+
+.Cards__front--number {
+  position: relative;
+  bottom: 9em;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  right: 1.5em;
+}
+
+.Cards__front--data {
+  position: relative;
+  bottom: 14em;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  right: 2em;
+  font-size: 0.5em;
+  color: hsl(270, 3%, 87%);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+@media (min-width: 1440px) {
+  .Cards {
+    width: 100%;
+    bottom: 10em;
+    left: -22em;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .Cards__front {
+    position: relative;
+    top: 3em;
+  }
+  .Cards__front--logo {
+    position: relative;
+    top: 5em;
+    right: 9em;
+  }
+  .Cards__back--number {
+    bottom: 11em;
+  }
+  .Cards__front--number {
+    font-size: 1.2em;
+    bottom: 8em;
+    right: 1em;
+  }
+  .Cards__front--data {
+    font-size: 0.6em;
+  }
+}
+.container-check__confirm {
+  width: 90%;
+  margin: 7.5em auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.container-check__confirm--good {
+  margin-bottom: 2em;
+}
+
+.container-check__confirm h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.7em;
+  font-size: 1.5em;
+  color: hsl(278, 68%, 11%);
+}
+
+.container-check__confirm p {
+  color: hsl(279, 6%, 55%);
+}
+
+.container-check__confirm input {
+  margin-top: 2em;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  height: 3em;
+}
+
+.invisible {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .container-check__confirm {
+    width: 100%;
+    bottom: 9em;
+    left: 10em;
+    position: absolute;
+  }
+}
+.form {
+  width: 90%;
+  margin: 5em auto;
+  position: relative;
+  z-index: 2;
+}
+
+label h5 {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+  color: hsl(278, 68%, 11%);
+  cursor: pointer;
+}
+
+.form__data {
+  display: flex;
+}
+
+input {
+  width: 90%;
+  margin: 0.5em 0 1em 0.3em;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid hsl(270, 3%, 87%);
+  cursor: pointer;
+  color: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+}
+
+input:focus {
+  border: 1px solid hsl(249, 99%, 64%);
+  outline: none;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+.form__data input {
+  width: 60%;
+}
+
+.confirm {
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  height: 3em;
+  margin-top: 1em;
+}
+
+.form__data .cvc {
+  width: 100%;
+}
+
+label .form__numberWrong, .complete, .expmonth, .expYear, .expCvc {
+  color: hsl(0, 100%, 66%);
+  position: relative;
+  bottom: 1em;
+  left: 0.5em;
+}
+
+.complete {
+  font-size: 0.7em;
+  height: 1.2em;
+}
+
+.year {
+  margin-right: 6em;
+}
+
+@media (min-width: 1440px) {
+  .form {
+    width: 100%;
+    bottom: 9em;
+    left: 10em;
+    position: absolute;
+  }
+  label .form__numberWrong {
+    font-size: 0.8em;
+  }
+}
+body {
+  font-size: 18px;
+}
+
+.gradient img {
+  height: 30vh;
+  width: 100%;
+}
+
+.container {
+  width: 375px;
+  margin: auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 1440px) {
+  .gradient {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 60vh;
+    position: relative;
+  }
+  .gradient img {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
