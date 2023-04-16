@@ -63,7 +63,8 @@ btn_confirm.addEventListener("click",(e)=>{
 
   if(nameUser.value==''){
     dateWrong[0].textContent=`can't be blank`;
-    valid=false;
+    console.log(cardName());
+    valid=false
   }
   
   if(input_cardFront.value=='' || cardNumber()){
@@ -86,7 +87,7 @@ btn_confirm.addEventListener("click",(e)=>{
 
   
   
-  if(valid){
+  else{
     formu.classList.toggle('invisible');
     container_confirm.classList.toggle('invisible');
     
@@ -102,7 +103,7 @@ btn_confirm.addEventListener("click",(e)=>{
 
 function cardNumber(){
   
-  const val = card_number_input.value;
+  const val =card_number_input.value;
   const valReplace=val.replace(/\s+/g,"");
   if(!isNaN(valReplace)){
   card_number.textContent=valReplace.replace(/(.{4})/g, '$1 ');
@@ -127,15 +128,18 @@ function cardNumber(){
 function cardName(){
 
   const name = nameUser.value;
-  CardsFrontname.textContent=name.toUpperCase();
+  
 
-  if(name==0){
+  if(name.length==0){
+    // dataWrongUser.textContent='';
     CardsFrontname.textContent=defaultUser;
-    dataWrongUser.textContent='';
+    return valid=false
     
-
+    
   }else{
-    dataWrongUser.textContent='';
+    CardsFrontname.textContent=name.toUpperCase();
+    // dataWrongUser.textContent='';
+    return valid=true
   }
   
 
