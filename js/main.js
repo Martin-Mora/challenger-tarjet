@@ -61,9 +61,8 @@ btn_confirm.addEventListener("click",(e)=>{
 
   
 
-  if(nameUser.value==''){
+  if(nameUser.value=="" || cardName()){
     dateWrong[0].textContent=`can't be blank`;
-    console.log(cardName());
     valid=false
   }
   
@@ -76,18 +75,18 @@ btn_confirm.addEventListener("click",(e)=>{
     dateWrong[2].textContent=`can't be blank`;
     valid=false;
   }
-  if(dataYear.value=='' || yearDate()){
-    dateWrong[3].textContent=`can't be blank`;
-    valid=false;
-  }
   if(inputCvc.value=='' || numbeBack()){
     dateWrong[4].textContent=`can't be blank`;
+    valid=false;
+  }
+  if(dataYear.value=='' || yearDate()){
+    dateWrong[3].textContent=`can't be blank`;
     valid=false;
   }
 
   
   
-  else{
+  if(valid){
     formu.classList.toggle('invisible');
     container_confirm.classList.toggle('invisible');
     
@@ -114,7 +113,6 @@ function cardNumber(){
     numberWrong.textContent='wrong format,number only';
     input_cardFront.style.border = "1px solid red";
     valid=false;
-
   }if(val.length==0){
     card_number.textContent=defaultValue;
     numberWrong.textContent='';
@@ -131,15 +129,13 @@ function cardName(){
   
 
   if(name.length==0){
-    // dataWrongUser.textContent='';
+    dataWrongUser.textContent='';
     CardsFrontname.textContent=defaultUser;
-    return valid=false
-    
-    
+    valid=false;
   }else{
     CardsFrontname.textContent=name.toUpperCase();
-    // dataWrongUser.textContent='';
-    return valid=true
+    dataWrongUser.textContent='';
+    valid=true;
   }
   
 
